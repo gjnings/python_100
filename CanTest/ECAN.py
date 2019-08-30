@@ -1,0 +1,27 @@
+from enum import Enum
+
+class ECANStatus(Enum):
+    STATUS_ERR = 0x00
+    STATUS_OK = 0x01
+
+class ECANErrorCode(Enum):
+    ERR_CAN_OVERFLOW = 0x00000001, # CAN控制器内部FIFO溢出
+    ERR_CAN_ERRALARM = 0x00000002, # CAN控制器错误报警T
+    ERR_CAN_PASSIVE = 0x00000004, # CAN控制器消极错误
+    ERR_CAN_LOSE = 0x00000008, # CAN控制器仲裁丢失
+    ERR_CAN_BUSERR = 0x00000010, # CAN控制器总线错误
+    ERR_CAN_REG_FULL = 0x00000020, # CAN接收寄存器满
+    ERR_CAN_REC_OVER = 0x00000040, # CAN接收寄存器溢出
+    ERR_CAN_ACTIVE = 0x00000080, # CAN控制器主动错误
+    ERR_DEVICEOPENED = 0x00000100, # 设备已经打开
+    ERR_DEVICEOPEN = 0x00000200, # 打开设备错误
+    ERR_DEVICENOTOPEN = 0x00000400, # 设备没有打开
+    ERR_BUFFEROVERFLOW = 0x00000800, # 缓冲区溢出
+    ERR_DEVICENOTEXIST = 0x00001000, # 此设备不存在
+    ERR_LOADKERNELDLL = 0x00002000, # 装载动态库失败
+    ERR_CMDFAILED = 0x00004000, # 执行命令失败
+    ERR_BUFFERCREATE = 0x00008000, # 内存不足
+    ERR_CANETE_PORTOPENED = 0x00010000, # 端口已经被打开
+    ERR_CANETE_INDEXUSED = 0x00020000, # 设备索引号已经被占用
+
+    
